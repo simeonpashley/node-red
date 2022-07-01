@@ -1,0 +1,2888 @@
+[
+    {
+        "id": "8b3a17d61a4a4362",
+        "type": "tab",
+        "label": "Light Socket - Tradfi 001",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "25b2c59987128adb",
+        "type": "tab",
+        "label": "Light Socket - Tradfi Landing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d31601df0c27c12d",
+        "type": "subflow",
+        "name": "sub: Tradfi on/off",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "b29a7b40457a96ec"
+                    },
+                    {
+                        "id": "b5fd4da79b272a69"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "54e2d1af429aa503",
+        "type": "subflow",
+        "name": "sub: low light >5min",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 280,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "be6581de52c38498"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 820,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "8aaf36463aa653e1",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 820,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "8aaf36463aa653e1",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "9187c07fe8ab662a",
+        "type": "subflow",
+        "name": "sub: tradfi003 on/off",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "c32995c73db56d91"
+                    },
+                    {
+                        "id": "71a4974b5795a8b8"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "8ee6344b9cdb729f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.88.41",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f9afa7b52385936e",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e57f3eae983a24fb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7594fa41997eaf28",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "f9afa7b52385936e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4be15daab5fbf80e",
+        "type": "light-scheduler-settings",
+        "name": "Rotherham",
+        "latitude": "53.41821587342052",
+        "longitude": "-1.2601661682128908"
+    },
+    {
+        "id": "100ccb9f777cad16",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 2,
+        "addon": false,
+        "rejectUnauthorizedCerts": false,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30"
+    },
+    {
+        "id": "748252701c209255",
+        "type": "position-config",
+        "name": "Home",
+        "isValide": "true",
+        "angleType": "deg",
+        "timeZoneOffset": 99,
+        "timeZoneDST": 0,
+        "stateTimeFormat": "3",
+        "stateDateFormat": "12",
+        "contextStore": ""
+    },
+    {
+        "id": "554df8faec7c45f7",
+        "type": "api-call-service",
+        "z": "d31601df0c27c12d",
+        "name": "001 ON",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [
+            "b429f5506414080f122b1171bf4cc7ad"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 820,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "174e3e8546379899",
+        "type": "api-call-service",
+        "z": "d31601df0c27c12d",
+        "name": "001 OFF",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [
+            "b429f5506414080f122b1171bf4cc7ad"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 820,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fef1b2ee51cfebe9",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "tradfi_001 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi001",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "174e3e8546379899"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3e06246d640ebf65",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "tradfi_001 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi001",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 640,
+        "y": 140,
+        "wires": [
+            [],
+            [
+                "554df8faec7c45f7"
+            ]
+        ]
+    },
+    {
+        "id": "b5fd4da79b272a69",
+        "type": "switch",
+        "z": "d31601df0c27c12d",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "unknown",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "bfb7a9a9e958a133",
+                "928b8e6f6790cd74"
+            ],
+            [
+                "bfb7a9a9e958a133"
+            ],
+            [
+                "bfb7a9a9e958a133",
+                "0204afbbe039caab"
+            ]
+        ]
+    },
+    {
+        "id": "b29a7b40457a96ec",
+        "type": "debug",
+        "z": "d31601df0c27c12d",
+        "name": "sub on/off",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 210,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "bfb7a9a9e958a133",
+        "type": "debug",
+        "z": "d31601df0c27c12d",
+        "name": "on/off switch",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 210,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "928b8e6f6790cd74",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "Auto Schedule",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.tradfi001_auto",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "3e06246d640ebf65",
+                "34fc486a43f40987"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0204afbbe039caab",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "Auto Schedule",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.tradfi001_auto",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "fef1b2ee51cfebe9",
+                "3efc5bd3004d832d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "34fc486a43f40987",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "tradfi_002 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi002",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [],
+            [
+                "8036fb58dcbb3fe5"
+            ]
+        ]
+    },
+    {
+        "id": "8036fb58dcbb3fe5",
+        "type": "api-call-service",
+        "z": "d31601df0c27c12d",
+        "name": "002 ON",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [
+            "539801d7a82e503bd5d6d8bf40c39258"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 820,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3efc5bd3004d832d",
+        "type": "api-current-state",
+        "z": "d31601df0c27c12d",
+        "name": "tradfi_002 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi002",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "8b01ed89342c6d3c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8b01ed89342c6d3c",
+        "type": "api-call-service",
+        "z": "d31601df0c27c12d",
+        "name": "002 OFF",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [
+            "539801d7a82e503bd5d6d8bf40c39258"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 820,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abafdb0420d1bcac",
+        "type": "debug",
+        "z": "54e2d1af429aa503",
+        "name": "low OUT2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a8a47785e34e0f58",
+        "type": "debug",
+        "z": "54e2d1af429aa503",
+        "name": "low OUT1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "be6581de52c38498",
+        "type": "api-current-state",
+        "z": "54e2d1af429aa503",
+        "name": "low light >5mins",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.front_low_light",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "5",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "8aaf36463aa653e1"
+            ]
+        ]
+    },
+    {
+        "id": "8aaf36463aa653e1",
+        "type": "switch",
+        "z": "54e2d1af429aa503",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "a8a47785e34e0f58"
+            ],
+            [
+                "abafdb0420d1bcac"
+            ]
+        ]
+    },
+    {
+        "id": "d0638160e700d267",
+        "type": "api-call-service",
+        "z": "9187c07fe8ab662a",
+        "name": "003 ON",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [
+            "c641263f32b18d7979342393279fafc6"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 900,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0928ef7b7c62c75",
+        "type": "api-call-service",
+        "z": "9187c07fe8ab662a",
+        "name": "003 OFF",
+        "server": "100ccb9f777cad16",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [
+            "c641263f32b18d7979342393279fafc6"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 900,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35191807149680ef",
+        "type": "api-current-state",
+        "z": "9187c07fe8ab662a",
+        "name": "tradfi_003 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi003",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 720,
+        "y": 340,
+        "wires": [
+            [
+                "d0928ef7b7c62c75"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0710b4acfe2c7461",
+        "type": "api-current-state",
+        "z": "9187c07fe8ab662a",
+        "name": "tradfi_003 ON?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi003",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [],
+            [
+                "d0638160e700d267"
+            ]
+        ]
+    },
+    {
+        "id": "71a4974b5795a8b8",
+        "type": "switch",
+        "z": "9187c07fe8ab662a",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "unknown",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "b3468781d3549f49",
+                "7932e0286d4cddfb"
+            ],
+            [
+                "b3468781d3549f49"
+            ],
+            [
+                "b3468781d3549f49",
+                "3cd5696c90f11832"
+            ]
+        ]
+    },
+    {
+        "id": "c32995c73db56d91",
+        "type": "debug",
+        "z": "9187c07fe8ab662a",
+        "name": "sub on/off",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b3468781d3549f49",
+        "type": "debug",
+        "z": "9187c07fe8ab662a",
+        "name": "on/off switch",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7932e0286d4cddfb",
+        "type": "api-current-state",
+        "z": "9187c07fe8ab662a",
+        "name": "Auto Schedule",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.tradfi001_auto",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "0710b4acfe2c7461"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3cd5696c90f11832",
+        "type": "api-current-state",
+        "z": "9187c07fe8ab662a",
+        "name": "Auto Schedule",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.tradfi001_auto",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "35191807149680ef"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "84a59236821cdfb5",
+        "type": "comment",
+        "z": "8b3a17d61a4a4362",
+        "name": "Force Status Update",
+        "info": "",
+        "x": 90,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8ae66b900db51880",
+        "type": "inject",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zigbee2mqtt/Tradfi 001/get",
+        "payload": "{\"state\":\"\"}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "54b73c77cc692e12"
+            ]
+        ]
+    },
+    {
+        "id": "54b73c77cc692e12",
+        "type": "mqtt out",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "topic": "zigbee2mqtt/Tradfi001",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8ee6344b9cdb729f",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "559d4fe33acf7f21",
+        "type": "comment",
+        "z": "8b3a17d61a4a4362",
+        "name": "Display Status",
+        "info": "",
+        "x": 70,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b73fe9c42f078a75",
+        "type": "mqtt in",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "topic": "zigbee2mqtt/Tradfi001",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "8ee6344b9cdb729f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "775680a760c1f0b4"
+            ]
+        ]
+    },
+    {
+        "id": "775680a760c1f0b4",
+        "type": "debug",
+        "z": "8b3a17d61a4a4362",
+        "name": "tradfi status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "72984bd635aa1dd3",
+        "type": "bigtimer",
+        "z": "8b3a17d61a4a4362",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "",
+        "name": "before Sunset",
+        "comment": "",
+        "lat": "53.41821587342052",
+        "lon": "-1.2601661682128908",
+        "starttime": "0",
+        "endtime": "5004",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": "0",
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": true,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [],
+            [
+                "519a759d9a97b3e7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "519a759d9a97b3e7",
+        "type": "switch",
+        "z": "8b3a17d61a4a4362",
+        "name": "after sunset?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "cb08afb0c636b3ca"
+            ],
+            [
+                "1901104f9a111781"
+            ]
+        ]
+    },
+    {
+        "id": "cb08afb0c636b3ca",
+        "type": "time-range-switch",
+        "z": "8b3a17d61a4a4362",
+        "name": "before 22:00",
+        "lat": "",
+        "lon": "",
+        "startTime": "00:00",
+        "endTime": "22:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "8cb8500479163e7a"
+            ],
+            [
+                "eaeccb080007d197"
+            ]
+        ]
+    },
+    {
+        "id": "feb437c4d001528e",
+        "type": "comment",
+        "z": "8b3a17d61a4a4362",
+        "name": "Low light - hold for 30mins ON or OFF",
+        "info": "",
+        "x": 630,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "af7cc518ba2d23fe",
+        "type": "comment",
+        "z": "8b3a17d61a4a4362",
+        "name": "Master Schedule",
+        "info": "",
+        "x": 80,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b03bdc6dfe648f56",
+        "type": "api-current-state",
+        "z": "8b3a17d61a4a4362",
+        "name": "off for 5mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi001",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "5",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 640,
+        "wires": [
+            [
+                "a446c4a55846a2db"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "024a3c6febd75798",
+        "type": "api-current-state",
+        "z": "8b3a17d61a4a4362",
+        "name": "on for 5mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi001",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "5",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 780,
+        "wires": [
+            [
+                "1d93161e1b92b5b9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "087f6d8f8446264a",
+        "type": "subflow:d31601df0c27c12d",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "x": 1250,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8cb8500479163e7a",
+        "type": "function",
+        "z": "8b3a17d61a4a4362",
+        "name": "on",
+        "func": "return { payload: \"on\", state: \"ON before 10pm\"  };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 500,
+        "wires": [
+            [
+                "087f6d8f8446264a"
+            ]
+        ]
+    },
+    {
+        "id": "1a406f3373e68123",
+        "type": "function",
+        "z": "8b3a17d61a4a4362",
+        "name": "off",
+        "func": "return { payload: \"off\", state: \"OFF after 10pm\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 540,
+        "wires": [
+            [
+                "087f6d8f8446264a"
+            ]
+        ]
+    },
+    {
+        "id": "e7c45c651c455d2d",
+        "type": "subflow:d31601df0c27c12d",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "x": 1200,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a446c4a55846a2db",
+        "type": "function",
+        "z": "8b3a17d61a4a4362",
+        "name": "on",
+        "func": "return { payload: \"on\", state: \"ON low light\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 680,
+        "wires": [
+            [
+                "e7c45c651c455d2d"
+            ]
+        ]
+    },
+    {
+        "id": "1d93161e1b92b5b9",
+        "type": "function",
+        "z": "8b3a17d61a4a4362",
+        "name": "off",
+        "func": "return { payload: \"off\", state: \"OFF low light\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 740,
+        "wires": [
+            [
+                "e7c45c651c455d2d"
+            ]
+        ]
+    },
+    {
+        "id": "eaeccb080007d197",
+        "type": "api-current-state",
+        "z": "8b3a17d61a4a4362",
+        "name": "TV off 10min?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "remote.50dx700_series",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "10",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 540,
+        "wires": [
+            [
+                "1a406f3373e68123"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5bbbc87e175de670",
+        "type": "bigtimer",
+        "z": "8b3a17d61a4a4362",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "",
+        "name": "after 10am",
+        "comment": "",
+        "lat": 0,
+        "lon": 0,
+        "starttime": "600",
+        "endtime": "1439",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "ON",
+        "outtext2": "OFF",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": true,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "6636ab917ca2a2d5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6636ab917ca2a2d5",
+        "type": "switch",
+        "z": "8b3a17d61a4a4362",
+        "name": "after 10?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "3ddb5d61019483b6",
+                "156454252b1cd73b"
+            ]
+        ]
+    },
+    {
+        "id": "1901104f9a111781",
+        "type": "time-range-switch",
+        "z": "8b3a17d61a4a4362",
+        "name": "after 12:00",
+        "lat": "",
+        "lon": "",
+        "startTime": "12:00",
+        "endTime": "23:59:59",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "2d597945e791c30c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3ddb5d61019483b6",
+        "type": "delay",
+        "z": "8b3a17d61a4a4362",
+        "name": "limit 1 per 10min",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "1d93161e1b92b5b9"
+            ]
+        ]
+    },
+    {
+        "id": "2d597945e791c30c",
+        "type": "subflow:54e2d1af429aa503",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "b03bdc6dfe648f56",
+                "59446ebcae7f0c91"
+            ],
+            [
+                "024a3c6febd75798",
+                "2a846d822e11fa91"
+            ]
+        ]
+    },
+    {
+        "id": "156454252b1cd73b",
+        "type": "debug",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "59446ebcae7f0c91",
+        "type": "api-current-state",
+        "z": "8b3a17d61a4a4362",
+        "name": "off for 5mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi002",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "5",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 680,
+        "wires": [
+            [
+                "a446c4a55846a2db"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2a846d822e11fa91",
+        "type": "api-current-state",
+        "z": "8b3a17d61a4a4362",
+        "name": "on for 5mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi002",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "5",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 740,
+        "wires": [
+            [
+                "1d93161e1b92b5b9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cc3c1073541aa50e",
+        "type": "inject",
+        "z": "8b3a17d61a4a4362",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 440,
+        "wires": [
+            [
+                "8cb8500479163e7a"
+            ]
+        ]
+    },
+    {
+        "id": "9b77cbd43893c54a",
+        "type": "comment",
+        "z": "25b2c59987128adb",
+        "name": "Force Status Update",
+        "info": "",
+        "x": 90,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3bd8986c07a6f723",
+        "type": "inject",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "zigbee2mqtt/Tradfi 001/get",
+        "payload": "{\"state\":\"\"}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "2db4c17477e2584a"
+            ]
+        ]
+    },
+    {
+        "id": "2db4c17477e2584a",
+        "type": "mqtt out",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "topic": "zigbee2mqtt/Tradfi003",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8ee6344b9cdb729f",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c13576d6ceb48f7a",
+        "type": "comment",
+        "z": "25b2c59987128adb",
+        "name": "Display Status",
+        "info": "",
+        "x": 70,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d05d8f0f3c527969",
+        "type": "mqtt in",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "topic": "zigbee2mqtt/Tradfi003",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "8ee6344b9cdb729f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "3295e7e7e1659fd4"
+            ]
+        ]
+    },
+    {
+        "id": "3295e7e7e1659fd4",
+        "type": "debug",
+        "z": "25b2c59987128adb",
+        "name": "tradfi status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8e36afe375b8be34",
+        "type": "bigtimer",
+        "z": "25b2c59987128adb",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "",
+        "name": "before Sunset",
+        "comment": "",
+        "lat": "53.41821587342052",
+        "lon": "-1.2601661682128908",
+        "starttime": "0",
+        "endtime": "5004",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": "0",
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": true,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [],
+            [
+                "66f63c50ac2f5035"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "66f63c50ac2f5035",
+        "type": "switch",
+        "z": "25b2c59987128adb",
+        "name": "after sunset?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "b098a9f018f26437"
+            ],
+            [
+                "153e202b1286ef29"
+            ]
+        ]
+    },
+    {
+        "id": "b098a9f018f26437",
+        "type": "time-range-switch",
+        "z": "25b2c59987128adb",
+        "name": "before 22:00",
+        "lat": "",
+        "lon": "",
+        "startTime": "00:00",
+        "endTime": "22:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "248a52ae2fa59b14"
+            ],
+            [
+                "6766cd385bb2dfca"
+            ]
+        ]
+    },
+    {
+        "id": "034bc9ed0e446995",
+        "type": "comment",
+        "z": "25b2c59987128adb",
+        "name": "Low light - hold for 30mins ON or OFF",
+        "info": "",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9808bec5765bdb94",
+        "type": "comment",
+        "z": "25b2c59987128adb",
+        "name": "Master Schedule",
+        "info": "",
+        "x": 80,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "99c123b29bebc4cd",
+        "type": "api-current-state",
+        "z": "25b2c59987128adb",
+        "name": "off for 15mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi003",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "15",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 680,
+        "wires": [
+            [
+                "7ac9d80043ee8f59"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "248a52ae2fa59b14",
+        "type": "function",
+        "z": "25b2c59987128adb",
+        "name": "on",
+        "func": "return { payload: \"on\", state: \"ON before 10pm\"  };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 500,
+        "wires": [
+            [
+                "d792ff4eb632d3a6"
+            ]
+        ]
+    },
+    {
+        "id": "5a0d0532757d4282",
+        "type": "function",
+        "z": "25b2c59987128adb",
+        "name": "off",
+        "func": "return { payload: \"off\", state: \"OFF after 10pm\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 540,
+        "wires": [
+            [
+                "d792ff4eb632d3a6"
+            ]
+        ]
+    },
+    {
+        "id": "7ac9d80043ee8f59",
+        "type": "function",
+        "z": "25b2c59987128adb",
+        "name": "on",
+        "func": "return { payload: \"on\", state: \"ON low light\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 680,
+        "wires": [
+            [
+                "c14fcbcb4c438dca"
+            ]
+        ]
+    },
+    {
+        "id": "2af813cde3209aed",
+        "type": "function",
+        "z": "25b2c59987128adb",
+        "name": "off",
+        "func": "return { payload: \"off\", state: \"OFF low light\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 740,
+        "wires": [
+            [
+                "c14fcbcb4c438dca"
+            ]
+        ]
+    },
+    {
+        "id": "6766cd385bb2dfca",
+        "type": "api-current-state",
+        "z": "25b2c59987128adb",
+        "name": "TV off 10min?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "remote.50dx700_series",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "10",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 540,
+        "wires": [
+            [
+                "5a0d0532757d4282"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c4f9d725db9a9a14",
+        "type": "bigtimer",
+        "z": "25b2c59987128adb",
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "",
+        "name": "after 10am",
+        "comment": "",
+        "lat": 0,
+        "lon": 0,
+        "starttime": "600",
+        "endtime": "1439",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "ON",
+        "outtext2": "OFF",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": true,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "254f37136e8d9d4d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "254f37136e8d9d4d",
+        "type": "switch",
+        "z": "25b2c59987128adb",
+        "name": "after 10?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "6b66bbd59ec858a5",
+                "d32de57ec3f5bc71"
+            ]
+        ]
+    },
+    {
+        "id": "153e202b1286ef29",
+        "type": "time-range-switch",
+        "z": "25b2c59987128adb",
+        "name": "after 12:00",
+        "lat": "",
+        "lon": "",
+        "startTime": "12:00",
+        "endTime": "23:59:59",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "0887b86d30fef650"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6b66bbd59ec858a5",
+        "type": "delay",
+        "z": "25b2c59987128adb",
+        "name": "limit 1 per 10min",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "2af813cde3209aed"
+            ]
+        ]
+    },
+    {
+        "id": "0887b86d30fef650",
+        "type": "subflow:54e2d1af429aa503",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "99c123b29bebc4cd"
+            ],
+            [
+                "98361449f7d41e60"
+            ]
+        ]
+    },
+    {
+        "id": "d32de57ec3f5bc71",
+        "type": "debug",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "98361449f7d41e60",
+        "type": "api-current-state",
+        "z": "25b2c59987128adb",
+        "name": "on for 15mins?",
+        "server": "100ccb9f777cad16",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.tradfi003",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "30",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 800,
+        "y": 740,
+        "wires": [
+            [
+                "2af813cde3209aed"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dc126032c59c8636",
+        "type": "inject",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 440,
+        "wires": [
+            [
+                "248a52ae2fa59b14"
+            ]
+        ]
+    },
+    {
+        "id": "d792ff4eb632d3a6",
+        "type": "subflow:9187c07fe8ab662a",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "x": 1210,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c14fcbcb4c438dca",
+        "type": "subflow:9187c07fe8ab662a",
+        "z": "25b2c59987128adb",
+        "name": "",
+        "x": 1210,
+        "y": 700,
+        "wires": []
+    }
+]
